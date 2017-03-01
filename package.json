@@ -5,7 +5,7 @@
   "author": "n-futagami <n-futagami@cloudpack.jp>",
   "private": true,
   "scripts": {
-    "sass-dev": "node-sass ./src/sass -o ./dist/css/ -w -r --output-style=compressed --source-map=true",
+    "sass-dev": "node-sass ./src/sass -o ./dist/css/ & node-sass ./src/sass -o ./dist/css/ -w -r --output-style=compressed --source-map=true",
     "sass-build": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compressed --source-map=false",
     "webpack-dev": "cross-env NODE_ENV=development webpack -w",
     "webpack-build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
