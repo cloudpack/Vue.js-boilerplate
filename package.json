@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "sass-dev": "node-sass ./src/sass -o ./dist/css/ & node-sass ./src/sass -o ./dist/css/ -w -r --output-style=compressed --source-map=true",
-    "sass-build": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compressed --source-map=false",
+    "sass-build": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compressed --source-map=dist/css",
     "webpack-dev": "cross-env NODE_ENV=development webpack -w",
     "webpack-build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "dev": "yarn sass-dev & yarn webpack-dev & browser-sync start -c bs-config.js",
