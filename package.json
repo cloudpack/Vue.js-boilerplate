@@ -5,12 +5,16 @@
   "author": "n-futagami <n-futagami@cloudpack.jp>",
   "private": true,
   "scripts": {
-    "sass-dev": "node-sass ./src/sass -o ./dist/css/ & node-sass ./src/sass -o ./dist/css/ -w -r --output-style=compressed --source-map=true",
-    "sass-build": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compressed --source-map=dist/css",
-    "webpack-dev": "cross-env NODE_ENV=development webpack -w",
+    "sass-dev": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compact --source-map=./dist/css",
+    "sass-watch": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compact --source-map=./dist/css -w",
+    "sass-build": "node-sass ./src/sass -o ./dist/css/ -r --output-style=compressed",
+    "webpack-dev": "cross-env NODE_ENV=development webpack",
+    "webpack-watch": "cross-env NODE_ENV=development webpack -w",
     "webpack-build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "dev": "yarn sass-dev & yarn webpack-dev & browser-sync start -c bs-config.js",
-    "build": "yarn sass-build & yarn webpack-build"
+    "watch": "yarn sass-watch & yarn webpack-watch",
+    "bs-watch": "yarn watch & browser-sync start -c bs-config.js",
+    "dev": "yarn sass-dev & yarn webpack-dev",
+    "build": "rm -rf ./dist & yarn sass-build & yarn webpack-build"
   },
   "dependencies": {
     "axios": "^0.15.3",

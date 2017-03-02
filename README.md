@@ -22,11 +22,20 @@ compiler,transpiler
 # install dependencies
 yarn install
 
-# serve with hot reload at localhost:8080
+# build for development, generate sourcemaps
 yarn run dev
 
 # build for production with minification
 yarn run build
+```
+
+## Other Scripts
+```bash
+## build for development with watch option
+yarn watch
+
+## open widow, and autoreload when js,css files changed
+yarn bs-watch
 ```
 
 ## Directory map
