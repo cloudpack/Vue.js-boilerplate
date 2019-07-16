@@ -20,22 +20,22 @@ compiler,transpiler
 
 ``` bash
 # install dependencies
-yarn install
+npm install
 
 # build for development, generate sourcemaps
-yarn run dev
+npm run dev
 
 # build for production with minification
-yarn run build
+npm run build
 ```
 
 ## Other Scripts
 ```bash
 ## build for development with watch option
-yarn watch
+npm watch
 
 ## open widow, and autoreload when js,css files changed
-yarn bs-watch
+npm bs-watch
 ```
 
 ## Directory map

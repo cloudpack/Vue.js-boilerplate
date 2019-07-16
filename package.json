@@ -11,10 +11,10 @@
     "webpack-dev": "cross-env NODE_ENV=development webpack",
     "webpack-watch": "cross-env NODE_ENV=development webpack -w",
     "webpack-build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "watch": "yarn sass-watch & yarn webpack-watch",
-    "bs-watch": "yarn watch & browser-sync start -c bs-config.js",
-    "dev": "yarn sass-dev & yarn webpack-dev",
-    "build": "rm -rf ./dist & yarn sass-build & yarn webpack-build"
+    "watch": "npm run sass-watch & npm run webpack-watch",
+    "bs-watch": "npm run watch & browser-sync start -c bs-config.js",
+    "dev": "npm run sass-dev & npm run webpack-dev",
+    "build": "rm -rf ./dist & npm run sass-build & npm run webpack-build"
   },
   "dependencies": {
     "axios": "^0.19.0",
